@@ -15,6 +15,8 @@ This process will consist of six steps as follows:<br/>
 5.) Importing the assets/ shapefiles into the script<br/>
 6.) Run the script to view products<br/>
 
+To better understand the script and how to do Machine learning with the google earth engine platform, refer from [Supervised classification in Earth Engine](https://developers.google.com/earth-engine/guides/classification)
+
 _______________1.) ACCESSING THE GEE PLATFORM_______________<br/>
 The GEE code editor platform is accessed [here](https://code.earthengine.google.com). It requires the users to have a [google account (Gmail)](https://mail.google.com). For new GEE users, it will prompt them to request for access. The response varies in duration.
 For more information and a detailed introduction to the platform, refer to the [GEE playground](https://developers.google.com/earth-engine/guides/playground).

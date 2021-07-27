@@ -2189,7 +2189,7 @@ print('Area objects list:',areaObjList);
                        //2020 FOREST NON FOREST   /////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-var forestMask2020 = classified2020.eq(1).and(2);
+var forestMask2020 = classified2020.eq(1).or(classified2020.eq(2));
 
 print(forestMask2020,'Crop mask')
 
@@ -2197,13 +2197,13 @@ var forestLandArea = classified2020.mask(forestMask2020);
 
 print(forestLandArea, '2020_Forest_Land_Area')
 
-Map.addLayer(forestMask2020.clip(AOI),{},'2020 Forest Land Area');
+Map.addLayer(forestMask2020.clip(AOI),{min:0,max:1,palette:['FF7F50','006400']},'2020 Forest Land Area');
 
 
 
 Export.image.toDrive({
   image: forestMask2020.clip(AOI),
-  description: '2020_Forest_Land_Area',
+  description: 'kibiku_2020_Forest_Land_Area',
   region: AOI,
   scale: 10,
   maxPixels: 1e12,
@@ -2275,7 +2275,7 @@ print('Landcover Areas 2016', areas2016, 'Hectares');
                        //2016 FOREST NON-FOREST  /////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-var forestMask2016 = classified2016.eq(1).and(2)
+var forestMask2016 = classified2016.eq(1).or(classified2016.eq(2))
 
 print(forestMask2016,'Crop mask')
 
@@ -2283,13 +2283,13 @@ var forestLandArea = classified2016.mask(forestMask2016);
 
 print(forestLandArea, '2016_Forest_Land_Area')
 
-Map.addLayer(forestMask2016.clip(AOI),{},'2016 Forest Land Area');
+Map.addLayer(forestMask2016.clip(AOI),{min:0,max:1,palette:['FF7F50','006400']},'2016 Forest Land Area');
 
 
 
 Export.image.toDrive({
   image: forestMask2016.clip(AOI),
-  description: '2016_Forest_Land_Area',
+  description: 'kibiku_2016_Forest_Land_Area',
   region: AOI,
   scale: 10,
   maxPixels: 1e12,
